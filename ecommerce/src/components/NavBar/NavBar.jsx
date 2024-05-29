@@ -9,33 +9,42 @@ import {
   MenuDivider,
   Button,
   Heading,
+  Flex,
+  Center,
+  Box,
   } from '@chakra-ui/react'
+import Logo from '../../assets/logo/logo.jpg'
+import './NavBar.css'
+import { Link } from 'react-router-dom'
 
 
 const NavBar = () => {
   return (
-    <div>
-        <Heading as='h2' size='xl'>
-        Esto es muy feo
+    <Flex justify={'space-between'} align={'center'} className='NavBar'>
+          
+        <Heading >
+        <img src={Logo}/>
         </Heading>
 <Menu>
   <MenuButton as={Button} colorScheme='pink'>
-    Home
+    Productos
   </MenuButton>
   <MenuList>
-    <MenuGroup title='Profile'>
-      <MenuItem>My Account</MenuItem>
-      <MenuItem>Payments </MenuItem>
+    <MenuGroup title='Mujer'>
+      <MenuItem><Link to='/categoria/remera'>Remeras</Link></MenuItem>
+      <MenuItem><Link to='/categoria/pantalon'>Pantalones</Link></MenuItem>
+      <MenuItem><Link to='/categoria/abrigo'>Abrigos</Link></MenuItem>
     </MenuGroup>
     <MenuDivider />
     <MenuGroup title='Help'>
-      <MenuItem>Docs</MenuItem>
-      <MenuItem>FAQ</MenuItem>
+      <MenuItem>Quienes somos</MenuItem>
+      <MenuItem>Preguntas frecuentes</MenuItem>
     </MenuGroup>
   </MenuList>
 </Menu>
         <CartWidget/>
-    </div>
+    </Flex>
+
   )
 }
 
