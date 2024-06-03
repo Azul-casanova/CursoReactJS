@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { getProductId } from '../../data/asyncMock'
 import { useEffect } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
@@ -8,10 +8,15 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 const ProductDetailsContainer = () => {
   const [producto, setProducto] = useState({})
   const {productId} = useParams()
-  
+  const Navegacion = useNavigate()
   useEffect(()=>{
     getProductId(productId)
-    .then((prod)=>setProducto(prod))
+    .then((prod)=> {
+      if(!prod){
+        Navegacion('/*')
+      }else{
+        setProducto(prod)
+            }})
     .catch((error)=> console.log(error)) 
   })
   

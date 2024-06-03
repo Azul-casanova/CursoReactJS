@@ -1,12 +1,14 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import React from 'react'
 import { TiShoppingCart } from "react-icons/ti";
+import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
   return (
-    <Box background={'white'}>
-        <TiShoppingCart />
-    </Box>
+    <Flex background={'white'}>
+      <Link to={'/cart'}> <TiShoppingCart />
+</Link>
+    </Flex>
   )
 }
 

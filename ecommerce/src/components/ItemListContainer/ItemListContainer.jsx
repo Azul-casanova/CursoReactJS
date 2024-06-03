@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { getProductCategory, getProducts } from '../../data/asyncMock';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 import { BounceLoader } from 'react-spinners';
 import { Flex } from '@chakra-ui/react';
+import context from '../../context/CartContext';
 
 const ItemListContainer = () => {
  const [products, setProducts] = useState([]);
@@ -21,6 +22,8 @@ const ItemListContainer = () => {
   .catch((error)=> console.log(error)) 
   .finally(() => setLoading(false))
  },[categoryId])
+
+ const { cart } = useContext(context)
 
 
   return (

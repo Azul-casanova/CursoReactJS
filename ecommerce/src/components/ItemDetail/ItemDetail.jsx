@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Card, Image, CardBody, CardFooter, Stack, Heading, Text, Button, Divider, Flex } from '@chakra-ui/react'
 import ItemCount from '../ItemCount/ItemCount'
+import context from '../../context/CartContext'
 
 
 
-const ItemDetail = ({nombre, precio, img, descripcion, stock}) => {
+const ItemDetail = ({id, nombre, precio, img, descripcion, stock}) => {
+  const onAdd = ((quantity)=>{
+    const item = {
+      id,
+      nombre,
+      precio,
+      img,
+      stock
+    }
+    ItemAdd(item, quantity)
+  })
+
+  const { ItemAdd } = useContext(context)
   return (
     <Flex backgroundColor={'green'} justify={'center'}>
     <Card maxW='sm'>
@@ -19,12 +32,11 @@ const ItemDetail = ({nombre, precio, img, descripcion, stock}) => {
           <Text color='blue.600' fontSize='2xl'>
           {precio}
           </Text>
-          <ItemCount stock={"stock"} initialValue={1}/>
-
         </Stack>
       </CardBody>
       <Divider />
       <CardFooter>
+      <ItemCount stock={stock} initialValue={1} onAdd={ItemAdd}/>
       </CardFooter>
     </Card>
         </Flex>)}

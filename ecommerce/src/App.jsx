@@ -7,6 +7,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 import ItemList from './components/ItemList/ItemList'
 import ProductDetailsContainer from './components/ProductDetailsContainer/ProductDetailsContainer'
 import Page404 from './components/Page404/Page404'
+import { ContextProvider } from './context/CartContext'
+import Cart from './components/cart/Cart'
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
 
   return (
     <ChakraProvider>
+      <ContextProvider>
       <BrowserRouter>
       <NavBar/>
       <Routes>
@@ -21,8 +24,10 @@ function App() {
         <Route path='/categoria/:categoryId' element={<ItemListContainer/>}/>
         <Route path='/producto/:productId' element={<ProductDetailsContainer/>}/>
         <Route path='*' element={<Page404/>}/>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
     </BrowserRouter>
+    </ContextProvider>
     </ChakraProvider>
 
 

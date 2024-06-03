@@ -28,7 +28,6 @@ const Item = ({nombre, categoria, img, precio, id,stock}) => {
       </Button>
     </ButtonGroup>
   </CardFooter>
-  <ItemCount stock={stock} initialValue={1}/>
 </Card>
     </Flex>
   )

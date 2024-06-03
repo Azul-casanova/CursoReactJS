@@ -23,7 +23,8 @@ const NavBar = () => {
     <Flex justify={'space-between'} align={'center'} className='NavBar'>
           
         <Heading >
-        <img src={Logo}/>
+          <Link to={'/'}>
+        <img src={Logo}/></Link>
         </Heading>
 <Menu>
   <MenuButton as={Button} colorScheme='pink'>
