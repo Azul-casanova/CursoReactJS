@@ -13,7 +13,7 @@ import {
   } from '@chakra-ui/react'
 
 const Cart = () => {
-const {cart, ItemAdd, removeItem, getTotal, VacialCart } = useContext(context)
+const {cart, ItemAdd, removeItem, getTotal, VaciarCart } = useContext(context)
 
   return (
 
@@ -43,6 +43,13 @@ const {cart, ItemAdd, removeItem, getTotal, VacialCart } = useContext(context)
     </Tbody>
 
     <Tfoot>
+    <Tr>
+    <Th colSpan="3">Total</Th>
+    <Th>{getTotal()}</Th>
+    <Th>
+    <button onClick={VaciarCart}>Vaciar Carrito</button>
+    </Th>
+    </Tr>
     </Tfoot>
   </Table>
 </TableContainer>
