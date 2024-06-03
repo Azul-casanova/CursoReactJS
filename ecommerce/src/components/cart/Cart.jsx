@@ -29,7 +29,7 @@ const {cart, ItemAdd, removeItem, getTotal, VaciarCart } = useContext(context)
     </Thead>
     <Tbody>
         {
-            cart.map((prod)=>{
+            cart.map((prod)=>(
       <Tr key={prod.id}>
         <Td>{prod.nombre}</Td>
         <Td>{prod.precio}</Td>
@@ -39,7 +39,7 @@ const {cart, ItemAdd, removeItem, getTotal, VaciarCart } = useContext(context)
         <button onClick={() => removeItem(prod.id)}>Eliminar</button>
         </Td>
       </Tr>
-    })}
+            ))}
     </Tbody>
 
     <Tfoot>

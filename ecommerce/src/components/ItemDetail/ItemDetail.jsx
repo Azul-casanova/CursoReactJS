@@ -36,7 +36,7 @@ const ItemDetail = ({id, nombre, precio, img, descripcion, stock}) => {
       </CardBody>
       <Divider />
       <CardFooter>
-      <ItemCount stock={stock} initialValue={1} onAdd={ItemAdd}/>
+      <ItemCount stock={stock} initialValue={1} onAdd={onAdd}/>
       </CardFooter>
     </Card>
         </Flex>)}

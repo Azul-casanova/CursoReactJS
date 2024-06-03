@@ -9,7 +9,7 @@ const productos =
           descripcion: "Camiseta Campera puffer matelaseada en microtafetas italianas. Sus mangas amplias de sisa caída con cierre desmontable permiten convertirla en un moderno chaleco. Tiene cartera delantera con cierre y snaps de metal black, cuello alto y bolsillos ojal en laterales. De calce suelto y largo hasta la primera cadera.",
           categoria: "abrigo",
           img: 'https://naum-oficial.com/wp-content/uploads/2024/02/Puffer-Karina-azul_11-30ATW509.webp',
-          precio: '$280.000'
+          precio: '280000'
         },
         {
           id: 2,
@@ -17,7 +17,8 @@ const productos =
           stock: 10,
           descripcion: "Campera súper urbana confeccionada en cuatro telas de diferentes texturas que se convertirá en el key item de tus looks de invierno. Tiene manga ranglan con matelaseado y sisa caída, ajuste en puño mediante snap metálico black, cartera con snaps metálicos black y bolsillos plaqué a ambos lados. Cuello de solapa levantada. Largo hasta la segunda cadera.",
           categoria: "abrigo",
-          img: 'https://naum-oficial.com/wp-content/uploads/2024/03/30ATD792P7_1.jpg'
+          img: 'https://naum-oficial.com/wp-content/uploads/2024/03/30ATD792P7_1.jpg',
+          precio: '520000'
         },
         {
           id: 3,
@@ -26,7 +27,7 @@ const productos =
           descripcion: "Chaleco matelaseado en microcord con efecto gastado de calce amplio y súper canchero, ideal para media estación. Tiene sisa caída y amplia, cartera delantera con cierre y snaps de metal black. Cuello alto y bolsillos ojal en laterales. Largo hasta la primera cadera.",
           categoria: "abrigo",
           img: 'https://naum-oficial.com/wp-content/uploads/2024/02/30ATD80920_1.jpg',
-          precio: '$300.000'
+          precio: '300000'
         },
         {
           id: 4,
@@ -35,7 +36,7 @@ const productos =
           descripcion: "Polera elastizada de silueta al cuerpo confeccionada en lurex de punto translúcido. Tiene cuello alto, manga larga pegada. Largo por la cadera. Una prenda ideal para armar un look de noche este invierno.Sudadera con capucha y bolsillo delantero",
           categoria: "remera",
           img: 'https://naum-oficial.com/wp-content/uploads/2024/04/30RYN73118_2-1000x1250.jpg',
-          precio: '$110.000'
+          precio: '110000'
         },
         {
           id: 5,
@@ -44,7 +45,7 @@ const productos =
           descripcion: "Remera básica confeccionada en jersey flama 100% algodón es un indispensable en todo placard. Tiene escote redondo a la base con detalle de triángulo bordado, manga larga pegada y largo por la cadera. verano con estampado floral",
           categoria: "remera",
           img: 'https://naum-oficial.com/wp-content/uploads/2024/02/30RID71018_1.jpg',
-          precio: '$67.000'
+          precio: '67000'
         },
         {
           id: 6,
@@ -53,7 +54,7 @@ const productos =
           descripcion: "Remera básica de silueta recta confeccionada en morley. Tiene escote en V tejido que termina en una media cartera con broches metálicos níquel, manga larga pegada que termina en puño. Largo por la cadera.",
           categoria: "remera",
           img: 'https://naum-oficial.com/wp-content/uploads/2024/03/30RTD71610_1.jpg',
-          precio: '$120.000'
+          precio: '120000'
         },
         {
           id: 7,
@@ -62,7 +63,7 @@ const productos =
           descripcion: "Jean recto con la pierna amplia. Tiene un lavado gastado espectacular en tono gris vintage. Tiene cierre metálico níquel, botón Naum black y remaches black en los bolsillos laterales. En espalda, bolsillos plaqué. Tiro medio.",
           categoria: "pantalon",
           img: 'https://naum-oficial.com/wp-content/uploads/2024/03/30PIJ75718_1.jpg',
-          precio: '$100.000'
+          precio: '100000'
         },
       ];
 
